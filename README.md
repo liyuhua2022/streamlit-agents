@@ -258,19 +258,6 @@ Modified : [列表]
 
 ## 📚 Skill 详细介绍
 
-### streamlit-extensions
-
-Streamlit 高级扩展组件库：
-
-| Package | Purpose | Import |
-|---------|---------|--------|
-| `streamlit_aggrid` | 交互式数据表格 | `from st_aggrid import AgGrid, AgGridTheme` |
-| `streamlit_echarts` | ECharts 可视化图表 | `from streamlit_echarts import st_echarts` |
-| `streamlit_option_menu` | 水平导航菜单 | `from streamlit_option_menu import option_menu` |
-| `streamlit_chatbox` | 聊天界面组件 | `from streamlit_chatbox import chatbox` |
-
----
-
 ### python-best-practices
 
 Python 专业开发规范：
@@ -291,6 +278,49 @@ Streamlit 生产级应用指南：
 - **会话状态**: 显式初始化、类型安全访问
 - **缓存策略**: `@st.cache_data` (数据获取)、`@st.cache_resource` (ML 模型)
 - **组件组合**: 可复用 UI 组件、业务逻辑分离
+
+---
+
+### streamlit-extensions
+
+Streamlit 高级扩展组件库：
+
+| Package | Purpose | Import |
+|---------|---------|--------|
+| `streamlit_aggrid` | 交互式数据表格 | `from st_aggrid import AgGrid, AgGridTheme` |
+| `streamlit_echarts` | ECharts 可视化图表 | `from streamlit_echarts import st_echarts` |
+| `streamlit_option_menu` | 水平导航菜单 | `from streamlit_option_menu import option_menu` |
+| `streamlit_chatbox` | 聊天界面组件 | `from streamlit_chatbox import chatbox` |
+
+---
+
+### skill-creator
+
+AI Skill 创建工具：
+
+- **Skill 结构**: 描述、允许的工具、核心逻辑
+- **评估方法**: 自动化测试、反馈优化
+- **最佳实践**: 清晰的描述、准确的工具定义、模块化设计
+
+---
+
+### test-driven-development
+
+TDD 开发模式：
+
+- **Red-Green-Refactor**: 先写失败测试，再写通过代码，最后重构
+- **测试金字塔**: 单元测试 → 集成测试 → 端到端测试
+- **Mock 技术**: 隔离依赖、专注业务逻辑
+
+---
+
+### requesting-code-review
+
+代码审查流程：
+
+- **审查标准**: 正确性、可读性、性能、安全性
+- **反馈指南**: 具体、可操作、建设性
+- **常见问题**: 命名、注释、错误处理、测试覆盖
 
 ---
 
