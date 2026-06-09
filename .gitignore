@@ -1,0 +1,6 @@
+__pycache__/
+.pytest_cache/
+.git/
+.env
+*.pyc
+auth_data.json

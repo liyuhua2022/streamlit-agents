@@ -1,0 +1,64 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m pytest tests/test_auth.py -v)",
+      "Bash(python -m streamlit run app.py --server.headless true)",
+      "Bash(python -c \"from streamlit.testing.v1 import AppTest; print\\('Streamlit testing available'\\)\")",
+      "Bash(python test_ac.py)",
+      "Bash(python test_edge_cases.py)",
+      "Bash(python -m pytest -v)",
+      "Bash(python -m streamlit run app.py --server.port)",
+      "Bash(python -m streamlit run app.py --server.port 8502)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8502)",
+      "Bash(curl -s http://localhost:8502)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'feat: Streamlit login app with session persistence *)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/block-dangerous-commands.js"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/protect-secrets"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/context-warning.js"
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "matcher": "coder",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/check-git-before-coder.sh",
+            "statusMessage": "Checking git status and branch..."
+          }
+        ]
+      }
+    ]
+  }
+}
