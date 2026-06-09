@@ -16,15 +16,9 @@
 |-------|-------------|---------------|
 | **python-best-practices** | Python 专业代码最佳实践 | PEP 8 规范、类型提示、模块化、DRY 原则、TDD、虚拟环境管理、Ruff/Black/Mypy 工具链 |
 | **streamlit-best-practices** | 生产级 Streamlit 应用开发 | 项目结构、会话状态管理、缓存策略、组件组合、性能优化 |
-| **frontend-design** | 前端设计指南 | 响应式布局、组件设计、设计系统 |
-| **hook-development** | Hook 开发指南 | 自定义 Hook 编写、生命周期管理 |
-| **next-best-practices** | Next.js 最佳实践 | App Router、Server Components、性能优化 |
-| **requesting-code-review** | 代码审查流程 | 审查标准、反馈指南 |
-| **shadcn** | shadcn/ui 组件库 | 组件使用、自定义主题 |
 | **skill-creator** | AI Skill 创建工具 | Skill 编写、评估、优化 |
 | **test-driven-development** | TDD 开发模式 | 测试驱动、测试金字塔 |
-| **vercel-react-best-practices** | Vercel React 部署 | 部署优化、边缘计算 |
-| **web-design-guidelines** | Web 设计规范 | 交互设计、用户体验 |
+| **requesting-code-review** | 代码审查流程 | 审查标准、反馈指南 |
 
 ### Claude Code 专用技能 (.claude/skills/)
 
@@ -232,8 +226,6 @@ Modified : [列表]
 ── Overrides (如有) ─────────────────────────────────
 [被跳过的 checkpoint 及原因]
 
-── Out of Scope / Follow-up ─────────────────────────
-[计划中排除的待跟进项]
 ─────────────────────────────────────────────────────
 ```
 
